@@ -5,18 +5,24 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Basket {
+public class BasketProduct {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private Double totalSum;
+    @ManyToOne
+    private Product product;
 
+    @ManyToOne
+    private Basket basket;
+
+    private Integer amount;
+
+    private Double price;
 }

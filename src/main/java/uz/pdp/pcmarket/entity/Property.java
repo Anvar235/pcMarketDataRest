@@ -19,5 +19,5 @@ public class Property {
     private String value;
 
     @ManyToOne
-    private Character characterId;
+    private Character character;
 }

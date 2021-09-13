@@ -22,8 +22,6 @@ public class Product {
 
     private Double price;
 
-    private boolean basket;
-
     private boolean recommendation;
 
     @ManyToOne
